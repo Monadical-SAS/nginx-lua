@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  nginx:
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - ./data/static:/var/www/example.com
+      - ./etc/nginx/tcm.dev.conf:/etc/nginx/nginx.conf
+      - ./etc/nginx/lua:/etc/nginx/lua
+    tty: true
