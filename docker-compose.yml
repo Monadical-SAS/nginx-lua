@@ -7,7 +7,6 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./data/static:/var/www/example.com
-      - ./etc/nginx/tcm.dev.conf:/etc/nginx/nginx.conf
-      - ./etc/nginx/lua:/etc/nginx/lua
-    tty: true
+      - ./data/static/trade.html:/usr/local/openresty/nginx/html/trade.html
+      - ./etc/nginx:/etc/nginx/conf.d
+      - ./etc/nginx/lua:/usr/local/openresty/nginx/html/lua
